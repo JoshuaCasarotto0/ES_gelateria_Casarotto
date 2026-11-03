@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio Gelataio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Una pallina al giorno toglie il dietologo di torno</h1>
+    
+    <div class="main">
+        <div class="quadrato">
+            <h2>Nuovo ordine</h2>
+            <p>
+                <b>Numero di palline: </b>
+                <input type="number" id="quantita" name="quantita" min="1" max="3" step="1" value="1" required>
+            </p>
+
+            <p>
+                <b>Contenitore:</b>
+                <input type="radio" id="cono" name="contenitore" value="cono">
+                <label for="cono">Cono (0,10€)</label>
+                <input type="radio" id="coppetta" name="contenitore" value="coppetta">
+                <label for="coppetta">Coppetta (0,20€)</label>
+            </p>
+
+            <label for="gusto"><b>Gusto:</b></label>
+            <select id="gusto" name="gusto">
+                <option value="0">Scegli il gusto</option>
+                <option value="fr">fragola</option>
+                <option value="ci">cioccolata</option>
+                <option value="st">stracciatella</option>
+                <option value="bi">biscotto</option>
+                <option value="vn">vaniglia</option>
+            </select>
+
+            <p>
+                <b>Aggiunte </b>(+ 0,50€ ciascuno)<b>:</b>
+                <input type="checkbox" id="panna" name="aggiunte" value="panna">
+                <label for="panna">Panna</label>
+                <input type="checkbox" id="caramello" name="aggiunte" value="caramello">
+                <label for="caramello">Caramello</label>
+                <input type="checkbox" id="cioccolato" name="aggiunte" value="cioccolato">
+                <label for="cioccolato">Cioccolato</label>
+            </p>
+
+            <button onclick="scontrino()">Richiedi scontrino</button>
+            <p class="messaggio" id="messaggio_scontrino"></p>
+            <p>
+                <b class="messaggio">Prezzo gelato: </b>
+                <span id="prezzo"></span>
+            </p>
+        </div>
+
+        <div class="quadrato">
+            <h2>Statistica della giornata</h2>
+
+            <p>
+                <b>Incasso totale:</b>
+                <span id="incasso"></span> €
+            </p>
+
+            <p>
+                <b>Ordini effettuati:</b>
+                <span id="ordini"></span>
+            </p>
+
+            <button onclick="fine_giornata()">Fine giornata</button>
+
+            <p id="risultato_giornata"></p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

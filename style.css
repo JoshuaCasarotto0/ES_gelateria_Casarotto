@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+}
+
+h1{
+    text-align: center;
+    color: #b14c4c;
+    font-size: 50px;
+}
+
+h2{
+    color: #b14c4c;
+    font-size: 30px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+.quadrato{
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(100, 70, 50, 0.08);
+}
+
+.messaggio{
+    color: #b14c4c;
+}
